@@ -23,6 +23,10 @@ export const WeatherIcons = {
   "10n": "/icons/rain-night.svg",
   "11d": "/icons/storm.svg",
   "11n": "/icons/storm.svg",
+  "13d": "/icons/snow.svg",
+  "13n": "/icons/snow.svg",
+  "50d": "/icons/mist.svg",
+  "50n": "/icons/mist.svg",
 };
 
 const WeatherContainer = styled.div`

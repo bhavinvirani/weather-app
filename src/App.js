@@ -6,7 +6,7 @@ import Serche from "./components/serche";
 import WeatherInfo from "./components/weather";
 
 
-const API = '73550ee673f4906d417f4a7ac2ff2e22'
+
 
 const Container = styled.div`
   display:flex;
@@ -33,13 +33,14 @@ function App() {
 
   const fetchWeather = async(e) => {
     e.preventDefault();
-    const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API}&units=metric`);
+    const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.REACT_APP_API_KEY}&units=metric`);
     setWeather(response.data)
   };
 
   return (
     <Container>
       <Label>Weather App</Label>
+      {/* weather is set initially not set */}
       {weather ? (
         <WeatherInfo weather={weather} /> ) : ( 
         <Serche setCity={setCity} fetchWeather={fetchWeather} /> 

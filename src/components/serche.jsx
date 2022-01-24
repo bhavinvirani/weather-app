@@ -47,7 +47,7 @@ const Serche = ({ setCity, fetchWeather }) => {
   return (
     <>
       <WeatherLogo src="/icons/day.svg" />
-      <ChooseCityLable>Find Weather of your city </ChooseCityLable>
+      <ChooseCityLable>Find Weather of your city</ChooseCityLable>
       <SercheBox onSubmit={fetchWeather}>
         <input
           onChange={(e) => setCity(e.target.value)}
